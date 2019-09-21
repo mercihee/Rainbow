@@ -2,10 +2,15 @@
 
 # 환경설정
 언어 : JAVA 8
+
 프레임워크 : Spring 4.3.11
+
 서버 : Apache Tomcat 8.5
+
 데이터베이스 : Oracle 11g
+
 기타기술 : JavaScript
+
 운영체제 : MacOS
 
 # 구현기능
