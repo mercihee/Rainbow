@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.rainbow.dao.AdminDAO">
+
+	<!-- 카테고리 호출 -->
+	<select id="category" resultType="com.project.rainbow.vo.CategoryVO">
+		select level, cName, cCode, cCodeRef from rain_category
+		start with cCodeRef is null connect by prior cCode = cCodeRef
+	</select>
+	
+	<!-- 상품 등록 -->
+	<insert id="product_insert">
+	 insert into rain_product(pNum, pName, cCode, pPrice, pStock, pContent, pImg, pImg2) 
+	 values(rain_product_seq.nextval, #{pName}, #{cCode}, #{pPrice}, #{pStock}, #{pContent}, #{pImg}, #{pImg2})
+	</insert>	
+
+	<!-- 상품 목록 -->
+	<select id="product_list" resultType="com.project.rainbow.vo.ProductVO">
+		select * from rain_product order by pNum desc
+	</select>
+
+	<!-- 상품 조회 + 카테고리 조인 -->
+	<select id="product_select" resultType="com.project.rainbow.vo.ProductVO">
+	 select p.pNum, p.pName, p.cCode, c.cCodeRef, c.cName, pPrice, pStock, pContent, pImg, pDate, pImg2 
+	 from rain_product p 
+	 inner join rain_category c 
+	 on p.cCode = c.cCode 
+	 where pNum = #{pNum}
+	</select>
+	
+	<!-- 상품 수정 -->
+	<update id="product_edit">
+	 update rain_product
+		 set 
+			 pName = #{pName},
+			 cCode = #{cCode},
+			 pPrice = #{pPrice},
+			 pStock = #{pStock},
+			 pContent = #{pContent},
+			 pImg = #{pImg},
+			 pImg2 = #{pImg2} 
+		 where pNum = #{pNum}
+	</update>
+	
+	<!-- 상품 삭제 전 체크 -->
+	<select id="cartCheck" resultType="int">
+		select count(*) from rain_cart where pNum = #{pNum}
+	</select>
+	
+	<!-- 상품 삭제 -->
+	<delete id="product_delete">
+		delete rain_product where pNum = #{pNum}
+	</delete>
+	
+	<!-- 회원수 -->
+	<select id="memberCount" resultType="int">
+		select count(*) from rain_member
+	</select>
+	
+	<!-- 회원목록 -->
+	<select id="list" resultType="com.project.rainbow.vo.MemberVO">
+		select userId, userName, userPhone, joinDate from rain_member
+	</select>
+	
+	<!-- 리뷰 리스트 -->
+	<select id="rvList" resultType="com.project.rainbow.vo.ReviewVO">
+		select * from rain_review
+	</select>
+	
+	<!-- 리뷰 상세 -->
+	<select id="rvSelect" resultType="com.project.rainbow.vo.ReviewVO">
+		select * from rain_review where rNum = #{rNum}
+	</select>
+	
+	<!-- 댓글 목록 -->
+	<select id="rpList" resultType="com.project.rainbow.vo.ReplyVO">
+	select r.rNum, r.userId, r.rpNum, r.rpContent, r.rpDate, m.userName
+	from rain_reply r
+	inner join rain_member m
+	on r.userId = m.userId
+	where rNum = #{rNum}
+	</select>
+	
+	<!-- 댓글 삭제 -->
+	<delete id="rpDelete">
+		delete rain_reply where rpNum = #{rpNum}
+	</delete>
+</mapper>

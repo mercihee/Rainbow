@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.rainbow.dao.MemberDAO">
+
+	<!-- 회원가입 -->
+	<insert id="signup">
+	 	insert into rain_member(userId, userPass, userName, userPhone)
+	 	values(#{userId}, #{userPass}, #{userName}, #{userPhone}) 
+	</insert>
+	
+	<!-- 로그인  -->
+	<select id="login" resultType="com.project.rainbow.vo.MemberVO">
+		select userId, userName, userPass, userPhone, joinDate, rainAdmin from rain_member where userId = #{userId}
+	</select>
+	
+	<!-- 아이디 중복 체크  -->
+	<select id="idCheck" resultType="int">
+		select count(*) from rain_member where userId = #{userId}
+	</select>
+	
+	<!--  번호 중복 체크  --> 
+	<select id="phoneCheck" resultType="int">
+		select count(*) from rain_member where userPhone = #{userPhone}
+	</select>
+	
+	<!-- 아이디 찾기 -->
+	<select id="findId" resultType="com.project.rainbow.vo.MemberVO">
+		select userId from rain_member where userName = #{userName} and userPhone = #{userPhone}
+	</select>
+
+	<select id="findPass" resultType="int">
+		select count(*) from rain_member where userId = #{userId}
+	</select>
+	
+	<!-- 비밀번호 변경 -->
+	<update id="updatePass">
+		update rain_member set userPass = #{userPass} where userId = #{userId}
+	</update>
+	
+	
+	
+</mapper>

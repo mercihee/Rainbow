@@ -1,0 +1,212 @@
+@charset "UTF-8";
+	
+html{
+	    background-color: #9e9e9e14;
+}
+#container ul li{
+	display: in
+}
+
+#kHead{
+	padding-top: 10px;
+	background-color: aliceblue;
+	height: 68px;
+	width: 100%;
+    position: fixed;
+        top: 0px;
+}
+#sideMenu{
+    background-color: aliceblue;
+    width: 150px;
+	height: 600px;
+}
+
+#sideMenu ul{
+	padding-top: 50px;
+}
+
+#sideMenu ul li{
+	margin-bottom: 10px;
+}
+
+.adminHome{
+	font-weight: bold;	
+}
+
+body{
+	margin:0px;
+	padding: 0px;
+}
+
+a:link { color: black; text-decoration: none;}
+a:visited { color: black; text-decoration: none;}
+a:hover { color: balck; text-decoration: none;}
+
+#rainLogo h1{
+	position: relative;
+    top: 15px;
+    left: 30px;
+    margin:0px;
+    width: 300px
+} 
+
+li{
+	list-style: none;
+}
+
+#container{
+	text-align: -webkit-center;
+    margin-top: 115px;
+}
+
+#container_box{
+	width: 700px;
+}
+
+table{
+	width: 700px;
+    border: 5px solid aliceblue;
+	border-radius: 20px;
+    padding: 15px;
+    background-color: white;
+}
+
+table tbody{
+	text-align: center;
+}
+
+.inputArea{
+	margin-bottom: 7px;
+	display: inline-flex;
+	border: 5px solid aliceblue;
+	border-radius: 20px;
+	background-color: white;
+	margin: 15px;
+	width: 550px;
+    place-content: center;
+}
+
+.inputArea ul{
+	text-align: left;
+	    padding: 0px;
+    margin-top: 30px;
+}
+
+.inputArea ul li{
+	margin-bottom:10px;
+}
+
+.inputArea label{
+	font-weight: bold;
+}
+
+button{
+	margin-top: 10px;
+    width: 44px;
+    height: 27px;
+    margin-right:10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#pContent{
+	width: 127px; 
+	border: 1px solid lightgray;
+}
+
+#right_icon{
+	float: right;
+	margin: -9px 35px 0px 0px;
+}
+
+#right_icon li{
+	float:right;
+	margin-left: 10px;
+}
+
+#welcome{
+	color:lightgray;
+	font-size: 13px;
+}
+
+#welcome p{
+	font-weight: bold;
+    display: contents;
+}
+
+#lout{
+	font-weight: bold;
+}
+
+td{
+	padding:10px;
+	border-top:1px solid lightgray;
+}
+
+<!--리뷰 상세-->
+
+.orderInfo input{
+	padding-left:10px
+}
+
+#rvDelete{
+	border: 1px solid black;
+    height: 27px;
+}
+
+.tableUl{
+	display: -webkit-inline-box;
+}
+
+.tableUl img{
+	width: 80px;
+    margin-left: 30px;
+}
+
+.rc img{
+	width: 300px; margin-top: 13px;
+}
+
+.rc th{
+	font-weight: normal;
+    /* float: left; */
+    border-bottom: 1px solid lightgray;
+    /* margin-bottom: 10px; */
+    padding-bottom: 10px;
+}
+
+#rpContent{
+	width: 330px;
+	height:45px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.userInfo ul{
+	    display: -webkit-inline-box;
+    padding: 0px;
+    float: left;
+}
+
+.rpForm{
+	display: -webkit-inline-box;
+}
+
+.rcon{
+	margin-left: 31px;
+	font-weight: normal;
+}
+
+.date{
+	margin-left:200px;
+	font-weight: normal;
+}
+
+td{
+	    border-top: 1px solid lightgray;
+    padding-top: 15px;
+}
+
+#rpDelete{
+	margin-left:10px;
+}

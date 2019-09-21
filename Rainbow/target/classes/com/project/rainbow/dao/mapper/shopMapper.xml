@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.rainbow.dao.ShopDAO">
+
+	<!-- 상품 전체 리스트 -->
+	<select id="list" resultType="com.project.rainbow.vo.ProductVO">
+		select * from rain_product
+	</select>
+	
+	<!-- 카테고리 상품 리스트 1차 분류 -->
+	<select id="list_1" resultType="com.project.rainbow.vo.ProductVO">
+	select p.pNum, p.pName, p.cCode, c.cCodeRef, c.cName, pPrice, pStock, pContent, pImg, pDate, p.pImg, p.pImg2 
+		from rain_product p 
+		inner join rain_category c 
+			on p.cCode = c.cCode 
+		where p.cCode = #{cCode} 
+			or c.cCodeRef = #{cCodeRef}
+	</select>
+	
+	<!-- 카테고리 상품 리스트 2차 분류 -->
+	<select id="list_2" resultType="com.project.rainbow.vo.ProductVO">
+	select p.pNum, p.pName, p.cCode, c.cCodeRef, c.cName, pPrice, pStock, pContent, pImg, pDate, p.pImg, p.pImg2 
+	from rain_product p 
+	inner join rain_category c 
+	on p.cCode = c.cCode 
+	where p.cCode = #{cCode}
+	</select>
+	
+	<!-- 상품 조회 + 카테고리 조인 -->
+	<select id="product_select" resultType="com.project.rainbow.vo.ProductVO">
+	 select p.pNum, p.pName, p.cCode, c.cCodeRef, c.cName, pPrice, pStock, pContent, pImg, pDate, pImg2 
+	 from rain_product p 
+	 inner join rain_category c 
+	 on p.cCode = c.cCode 
+	 where pNum = #{pNum}
+	</select>
+	
+	<!-- 리뷰 리스트 -->
+	<select id="rvList" resultType="com.project.rainbow.vo.ReviewVO">
+		select * from rain_review where pNum = #{pNum}
+	</select>
+	
+	<!-- 댓글 목록 -->
+	<select id="rpList" resultType="com.project.rainbow.vo.ReplyVO">
+	select r.rNum, r.userId, r.rpNum, r.rpContent, r.rpDate, m.userName
+	from rain_reply r
+	inner join rain_member m
+	on r.userId = m.userId
+	where pNum = #{pNum}
+	</select>
+	
+	<!-- 카트 담기 -->
+	<insert id="addCart">
+	 insert into rain_cart (cartNum, userId, pNum, cartStock, pPrice)
+	     values (rain_cart_seq.nextval, #{userId}, #{pNum}, #{cartStock}, #{pPrice})
+	</insert>
+	
+	<!-- 카트에 동일한 상품 담겨있는지 체크  -->
+	<select id="cartCheck" resultType="int">
+		select count(*) from rain_cart 
+		where userId = #{userId} and pNum = #{pNum}
+	</select>
+	
+	<!-- 카트에 동일한 상품이 담겨있을시 수량만 업데이트 -->
+	<update id="updateCart">
+		update rain_cart set cartStock = cartStock + #{cartStock} 
+		where userId = #{userId} and pNum = #{pNum}
+	</update>
+	
+	<!-- 카트 갯수 -->
+	<select id="cart_number" resultType="int">
+		select count(*) from rain_cart where userId=#{userId}
+	</select>
+	
+	<!-- 카트 합계  -->
+	<select id="getResultCartAll" resultType="int">
+		select sum(pPrice*cartStock) from rain_cart where userId=#{userId}
+	</select>
+	
+	<!-- 카트 리스트 -->
+	<select id="cartList" resultType="com.project.rainbow.vo.CartListVO">
+	select row_number() over(order by c.cartNum desc) as num, c.cartNum, 
+	c.userId, c.pNum, c.cartStock, c.cartDate, p.pName, p.pPrice, p.pImg2 
+	from rain_cart c 
+		inner join rain_product p 
+			on c.pNum = p.pNum 
+		where c.userId = #{userId}
+	</select>
+	
+	<!-- 카트 수량 업데이트 -->
+	<update id="editStock">
+		update rain_cart set cartStock = #{cartStock} 
+		where cartNum = #{cartNum}
+	</update>
+	
+		<!-- 카트 선택 삭제  -->
+	<delete id="cartSelectDelete">
+		delete rain_cart where cartNum = #{cartNum}
+	</delete>
+	
+	<!-- 주문 선택  -->
+	<select id="selectBuy" resultType="com.project.rainbow.vo.CartListVO">
+		select * from rain_cart c
+			inner join rain_product p
+				on c.pNum = p.pNum
+			where c.cartNum = #{cartNum}
+	</select>
+	
+	<!-- 주문 -->
+	<insert id="orderInfo">
+ 	insert into rain_order(orderId, userId, orderRec, userAddr1, userAddr2, userAddr3, orderPhone, amount) 
+ 	values(#{orderId}, #{userId}, #{orderRec}, #{userAddr1}, #{userAddr2}, #{userAddr3}, #{orderPhone}, #{amount})
+	</insert>
+	
+	<!-- 주문 상세 정보 --> 
+	<insert id="orderInfo_Details">
+	insert into rain_order_details(orderDnum, orderId, pNum, cartStock, cartNum)
+	 select rain_order_details_seq.nextval, #{orderId}, pNum, cartStock, #{cartNum}
+	 from rain_cart where cartNum = #{cartNum}
+	</insert> 
+	
+	<!-- 주문한 상품 삭제  -->
+	<delete id="select_order_delete">
+		delete from rain_cart where cartNum = #{cartNum}
+	</delete>
+	
+	<!-- 주문 목록 -->
+	<select id="orderList" resultType="com.project.rainbow.vo.OrderVO">
+	 select orderId, userId, orderRec, userAddr1, userAddr2, userAddr3, orderPhone, amount, orderDate
+	 from rain_order
+	 where userId = #{userId}
+	</select>
+
+	<!-- 주문 상세 정보 페이지 -->
+	<select id="orderView" resultType="com.project.rainbow.vo.OrderListVO">
+	 select o.orderId, o.userId, o.orderRec, o.userAddr1, o.userAddr2, o.userAddr3, o.orderPhone, 
+	 o.amount, o.orderDate, d.orderDnum, d.pNum, d.cartStock, p.pName, p.pImg2, p.pPrice
+	 from rain_order o
+	 	inner join rain_order_details d
+	 		on o.orderId = d.orderId
+	 	inner join rain_product p
+	 		on d.pNum = p.pNum
+	 	where o.userId = #{userId} and o.orderId = #{orderId}
+	</select>
+	
+	<!-- 특정 상품 구매했는지 체크 -->
+	<select id="orderCheck" resultType="int">
+	select count(*) from rain_order o
+	inner join rain_order_details d
+	on o.orderId = d.orderId
+	inner join rain_product p
+	on d.pNum = p.pNum
+	where o.userId = #{userId}
+	and d.pNum = #{pNum}
+	</select>	
+	
+	<!-- 리뷰 등록 -->
+	<insert id="rvInsert">
+	 insert into rain_review(pNum, userId, userName, rTitle, rNum, rContent, rImg) 
+	 values(#{pNum}, #{userId}, #{userName}, #{rTitle}, rain_review_seq.nextval, #{rContent}, #{rImg})
+	</insert>
+	
+	<!-- 리뷰 상세 -->
+	<select id="rvSelect" resultType="com.project.rainbow.vo.ReviewVO">
+		select * from rain_review where rNum = #{rNum}
+	</select>	
+
+	<!-- 리뷰 수정 -->
+	<update id="rvEdit">
+	 update rain_review
+		 set 
+			 rTitle = #{rTitle},
+			 rContent = #{rContent},
+			 rImg = #{rImg}
+		 where rNum = #{rNum}
+	</update>
+	
+	<!-- 리뷰 삭제 -->
+	<delete id="rvDelete">
+		delete rain_review where rNum = #{rNum}
+	</delete>	
+	
+	<!-- 리뷰 댓글 작성 -->
+	<insert id="insertReply">
+	insert into rain_reply(pNum, rNum, userId, rpNum, rpContent)
+	values(#{pNum}, #{rNum}, #{userId}, rain_reply_seq.nextval, #{rpContent})
+	</insert>
+	
+	<!-- 검색 전 해당 키워드가 존재하는지 -->
+	<select id="searchCount" resultType="int">
+		select count(*) from rain_product 
+		where pName like '%' || '${pName}' || '%'
+	</select>
+
+	<!-- 검색 -->
+	<select id="shopSearch" resultType="com.project.rainbow.vo.ProductVO">
+	select * from rain_product 
+	where pName like '%' || '${pName}' || '%'
+	</select>		
+
+	
+	</mapper>
