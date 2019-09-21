@@ -37,6 +37,8 @@ Source
 - View (JSP File) 30개
 
 
+
+
 # *회원가입*
 : 폼 유효성 검사 후 패스워드는 BCrypt를 이용해 암호화하여 DB에 저장된다.
 ![join](Rainbow/src/main/webapp/resources/images/join.gif)
@@ -49,11 +51,15 @@ Source
 
 <hr/>
 
+
+
 # *아이디 찾기*
 : 회원가입시 입력한 닉네임과 연락처로 DB 검색 후 값이 있을시 값에 해당하는 이메일을 출력한다.
 ![findid](Rainbow/src/main/webapp/resources/images/findid.gif)
 
 <hr/>
+
+
 
 # *비밀번호 찾기 / 변경*
 : 입력한 이메일이 회원 테이블에 있을시에만 JavaMail을 통해 비밀번호를 변경하는 폼을 메일로 발송한다.
@@ -63,10 +69,14 @@ Source
 
 <hr/>
 
+
+
 # *카테고리별 상품 목록*
 ![category](Rainbow/src/main/webapp/resources/images/category.gif)
 
 <hr/>
+
+
 
 # *키워드 검색*
 - 키워드를 검색하면 해당 키워드가 들어간 상품이 출력된다. 
@@ -75,11 +85,15 @@ Source
 
 <hr/>
 
+
+
 # *장바구니*
 : 상품 상세 페이지에서 Ajax를 통해 장바구니에 담긴다. 해당 상품이 이미 담겨있을 땐 중복 방지를 위해 수량만 업데이트 된다.
 ![addcart](Rainbow/src/main/webapp/resources/images/addcart.gif)
 
 <hr/>
+
+
 
 # *주문하기*
 - 장바구니에서 선택한 상품만 출력된다.
@@ -87,12 +101,16 @@ Source
 - 주문 완료한 상품은 장바구니에서 사라진다.
 ![order](Rainbow/src/main/webapp/resources/images/order.gif)
 
+
+
 # *주문 목록*
 - 회원이 지금까지 주문한 주문 목록이 주문번호로 나뉘어서 출력된다. 
 - 주문번호를 통해 해당 주문의 상세 정보 페이지로 이동이 가능하다.
 ![orderlist](Rainbow/src/main/webapp/resources/images/orderlist.gif)
 
 <hr/>
+
+
 
 # *리뷰 등록*
 - 해당 아이디로 주문한 상품만 후기글을 작성할 수 있으며 자신의 글에만 ‘수정’, ‘삭제’ 버튼이 보인다. 
@@ -102,6 +120,8 @@ Source
 ![norderrv](Rainbow/src/main/webapp/resources/images/norderrv.gif)
 
 <hr/>
+
+
 
 # *댓글*
 - 개인정보보호로 회원의 닉네임과 댓글 내용, 날짜만 출력된다.
