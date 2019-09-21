@@ -80,6 +80,7 @@ Source
 <br/>
 <br/>
 <<strong> 메일로 넘어온 폼을 통해 비밀번호 변경 <strong>>
+  - 회원가입할 때와 마찬가지로 유효성 검사 후 변경
 ![uppass](Rainbow/src/main/webapp/resources/images/uppass.gif)
 
 <hr/>
