@@ -65,7 +65,7 @@ Source
 : 입력한 이메일이 회원 테이블에 있을시에만 JavaMail을 통해 비밀번호를 변경하는 폼을 메일로 발송한다.
 ![findpass](Rainbow/src/main/webapp/resources/images/findpass.gif)
 
-![updatepass](Rainbow/src/main/webapp/resources/images/updatepass.gif)
+![uppass](Rainbow/src/main/webapp/resources/images/uppass.gif)
 
 <hr/>
 
