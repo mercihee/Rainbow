@@ -36,6 +36,7 @@ Source
 - Mapper Class 3개
 - View (JSP File) 30개
 
-#### *회원가입*
+
+## *회원가입*
 : 폼 유효성 검사 후 패스워드는 BCrypt를 이용해 암호화하여 DB에 저장된다.
 ![join](Rainbow/src/main/webapp/resources/images/join.gif)
