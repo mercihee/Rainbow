@@ -93,6 +93,7 @@ Source
 - ‘리빙’ 카테고리를 클릭하면 하위 카테고리인 ‘컵’, ‘텀블러’의 상품이 모두 출력되고, ‘리빙’의 하위 카테고리인 ‘컵’ 클릭시 ‘컵’의 상품만 보여짐
 <br/>
 <br/>
+
 ![category](Rainbow/src/main/webapp/resources/images/category.gif)
 
 <hr/>
@@ -105,6 +106,7 @@ Source
 - 카테고리별 상품 목록과 같이 이미지나 상품 이름을 클릭하면 해당 상품의 상세 페이지로 넘어감
 <br/>
 <br/>
+
 ![search](Rainbow/src/main/webapp/resources/images/search.gif)
 
 <hr/>
@@ -118,6 +120,7 @@ Source
 - 선택한 상품을 삭제, 구매
 <br/>
 <br/>
+
 ![addcart](Rainbow/src/main/webapp/resources/images/addcart.gif)
 
 <hr/>
@@ -131,6 +134,7 @@ Source
 - 주문 완료한 상품은 장바구니에서 사라짐
 <br/>
 <br/>
+
 ![order](Rainbow/src/main/webapp/resources/images/order.gif)
 
 <hr/>
@@ -143,6 +147,7 @@ Source
 - 주문번호를 통해 해당 주문의 상세 정보 페이지로 이동
 <br/>
 <br/>
+
 ![orderlist](Rainbow/src/main/webapp/resources/images/orderlist.gif)
 
 <hr/>
@@ -156,7 +161,9 @@ Source
 - 상품을 구매하지 않으면 리뷰를 등록 불가
 <br/>
 <br/>
+
 ![orderreview](Rainbow/src/main/webapp/resources/images/orderreview.gif)
+
 <br/>
 <br/>
 <<strong> 구매하지 않았을 시 <strong>>
