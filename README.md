@@ -47,6 +47,7 @@ Source
 
 # *로그인*
 : 입력한 이메일을 이용해 패스워드를 가져온 후 로그인 폼에 입력한 패스워드와 DB에 저장된 패스워드를 비교하여 로그인한다.
+<br>
 ![login](Rainbow/src/main/webapp/resources/images/login.gif)
 
 <hr/>
@@ -72,6 +73,9 @@ Source
 
 
 # *카테고리별 상품 목록*
+- 카테고리는 1차와 2차로 나뉜다. 
+- ‘리빙’ 카테고리를 클릭하면 하위 카테고리인 ‘컵’, ‘텀블러’의 상품이 모 두 출력되고, ‘리빙’의 하위 카테고리인 ‘컵’ 클릭시 ‘컵’의 상품만 보여진다.
+
 ![category](Rainbow/src/main/webapp/resources/images/category.gif)
 
 <hr/>
