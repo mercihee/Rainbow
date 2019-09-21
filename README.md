@@ -87,6 +87,7 @@ Source
   - 회원가입할 때와 마찬가지로 유효성 검사 후 변경
 <br/>
 <br/>
+
 ![uppass](Rainbow/src/main/webapp/resources/images/uppass.gif)
 
 <hr/>
@@ -99,6 +100,7 @@ Source
 - ‘리빙’ 카테고리를 클릭하면 하위 카테고리인 ‘컵’, ‘텀블러’의 상품이 모두 출력되고, ‘리빙’의 하위 카테고리인 ‘컵’ 클릭시 ‘컵’의 상품만 보여짐
 <br/>
 <br/>
+
 ![category](Rainbow/src/main/webapp/resources/images/category.gif)
 
 <hr/>
@@ -124,6 +126,7 @@ Source
 - 선택한 상품을 삭제, 구매
 <br/>
 <br/>
+
 ![addcart](Rainbow/src/main/webapp/resources/images/addcart.gif)
 
 <hr/>
@@ -137,6 +140,7 @@ Source
 - 주문 완료한 상품은 장바구니에서 사라짐
 <br/>
 <br/>
+
 ![order](Rainbow/src/main/webapp/resources/images/order.gif)
 
 <hr/>
@@ -149,6 +153,7 @@ Source
 - 주문번호를 통해 해당 주문의 상세 정보 페이지로 이동
 <br/>
 <br/>
+
 ![orderlist](Rainbow/src/main/webapp/resources/images/orderlist.gif)
 
 <hr/>
@@ -162,11 +167,13 @@ Source
 - 상품을 구매하지 않으면 리뷰를 등록 불가
 <br/>
 <br/>
+
 ![orderreview](Rainbow/src/main/webapp/resources/images/orderreview.gif)
 
 <br/>
 <br/>
 <<strong> 구매하지 않았을 시 </strong>>
+
 ![norderrv](Rainbow/src/main/webapp/resources/images/norderrv.gif)
 
 <hr/>
@@ -180,6 +187,7 @@ Source
 - ‘댓글은 로그인 후 이용 가능 합니다.’의 ‘로그인’에 로그인 페이지 링크를 걸어둬서 바로 이동 가능
 <br/>
 <br/>
+
 ![reply](Rainbow/src/main/webapp/resources/images/reply.gif)
 
 <br/>
@@ -188,5 +196,6 @@ Source
 <<strong> 로그인 안 했을 때 </strong>>
 <br/>
 <br/>
+
 ![nreply](Rainbow/src/main/webapp/resources/images/nreply.gif)
 
