@@ -48,10 +48,11 @@ Source
 
 ![join](Rainbow/src/main/webapp/resources/images/join.gif)
 
+<br/>
 <hr/>
 <br/>
 <br/>
-<br/>
+
 
 # *로그인*
 : 입력한 이메일을 이용해 패스워드를 가져온 후 로그인 폼에 입력한 패스워드와 DB에 저장된 패스워드를 비교하여 로그인
@@ -60,10 +61,11 @@ Source
 
 ![login](Rainbow/src/main/webapp/resources/images/login.gif)
 
+<br/>
 <hr/>
 <br/>
 <br/>
-<br/>
+
 
 # *아이디 찾기*
 : 회원가입시 입력한 닉네임과 연락처로 DB 검색 후 값이 있을시 값에 해당하는 이메일 출력
@@ -72,10 +74,11 @@ Source
 
 ![findid](Rainbow/src/main/webapp/resources/images/findid.gif)
 
+<br/>
 <hr/>
 <br/>
 <br/>
-<br/>
+
 
 # *비밀번호 찾기 / 변경*
 : 입력한 이메일이 회원 테이블에 있을시에만 JavaMail을 통해 비밀번호를 변경하는 폼을 메일로 발송
@@ -94,10 +97,11 @@ Source
 
 ![uppass](Rainbow/src/main/webapp/resources/images/uppass.gif)
 
+<br/>
 <hr/>
 <br/>
 <br/>
-<br/>
+
 
 # *카테고리별 상품 목록*
 - 카테고리는 1차와 2차로 나뉨
@@ -107,10 +111,11 @@ Source
 
 ![category](Rainbow/src/main/webapp/resources/images/category.gif)
 
+<br/>
 <hr/>
 <br/>
 <br/>
-<br/>
+
 
 # *키워드 검색*
 - 키워드를 검색하면 해당 키워드가 들어간 상품만 출력
@@ -120,10 +125,11 @@ Source
 
 ![search](Rainbow/src/main/webapp/resources/images/search.gif)
 
+<br/>
 <hr/>
 <br/>
 <br/>
-<br/>
+
 
 # *장바구니*
 - 상품 상세 페이지에서 Ajax를 통해 장바구니에 담김
@@ -134,10 +140,11 @@ Source
 
 ![addcart](Rainbow/src/main/webapp/resources/images/addcart.gif)
 
+<br/>
 <hr/>
 <br/>
 <br/>
-<br/>
+
 
 # *주문하기*
 - 장바구니에서 선택한 상품만 출력
@@ -148,10 +155,11 @@ Source
 
 ![order](Rainbow/src/main/webapp/resources/images/order.gif)
 
+<br/>
 <hr/>
 <br/>
 <br/>
-<br/>
+
 
 # *주문 목록*
 - 회원이 지금까지 주문한 주문 목록이 주문번호로 나뉘어서 출력
@@ -161,10 +169,11 @@ Source
 
 ![orderlist](Rainbow/src/main/webapp/resources/images/orderlist.gif)
 
+<br/>
 <hr/>
 <br/>
 <br/>
-<br/>
+
 
 # *리뷰*
 - 후기글의 제목을 클릭하면 해당 글의 내용과 댓글 리스트가 보여짐
@@ -181,8 +190,8 @@ Source
 
 ![norderrv](Rainbow/src/main/webapp/resources/images/norderrv.gif)
 
-<hr/>
 <br/>
+<hr/>
 <br/>
 <br/>
 
