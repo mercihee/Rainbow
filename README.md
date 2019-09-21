@@ -37,102 +37,144 @@ Source
 - View (JSP File) 30개
 
 <hr/>
-
+<br/>
+<br/>
+<br/>
 
 # *회원가입*
-: 폼 유효성 검사 후 패스워드는 BCrypt를 이용해 암호화하여 DB에 저장된다.
+: 폼 유효성 검사 후 패스워드는 BCrypt를 이용해 암호화하여 DB에 저장됨
+<br/>
+<br/>
 ![join](Rainbow/src/main/webapp/resources/images/join.gif)
 
 <hr/>
+<br/>
+<br/>
+<br/>
 
 # *로그인*
-: 입력한 이메일을 이용해 패스워드를 가져온 후 로그인 폼에 입력한 패스워드와 DB에 저장된 패스워드를 비교하여 로그인한다.
+: 입력한 이메일을 이용해 패스워드를 가져온 후 로그인 폼에 입력한 패스워드와 DB에 저장된 패스워드를 비교하여 로그인
 <br/>
 <br/>
 ![login](Rainbow/src/main/webapp/resources/images/login.gif)
 
 <hr/>
-
-
+<br/>
+<br/>
+<br/>
 
 # *아이디 찾기*
-: 회원가입시 입력한 닉네임과 연락처로 DB 검색 후 값이 있을시 값에 해당하는 이메일을 출력한다.
+: 회원가입시 입력한 닉네임과 연락처로 DB 검색 후 값이 있을시 값에 해당하는 이메일 출력
+<br/>
+<br/>
 ![findid](Rainbow/src/main/webapp/resources/images/findid.gif)
 
 <hr/>
-
-
+<br/>
+<br/>
+<br/>
 
 # *비밀번호 찾기 / 변경*
-: 입력한 이메일이 회원 테이블에 있을시에만 JavaMail을 통해 비밀번호를 변경하는 폼을 메일로 발송한다.
+: 입력한 이메일이 회원 테이블에 있을시에만 JavaMail을 통해 비밀번호를 변경하는 폼을 메일로 발송
 ![findpass](Rainbow/src/main/webapp/resources/images/findpass.gif)
-
+<br/>
+<br/>
+<<strong> 메일로 넘어온 폼을 통해 비밀번호 변경 <strong>>
 ![uppass](Rainbow/src/main/webapp/resources/images/uppass.gif)
 
 <hr/>
-
-
+<br/>
+<br/>
+<br/>
 
 # *카테고리별 상품 목록*
-- 카테고리는 1차와 2차로 나뉜다. 
-- ‘리빙’ 카테고리를 클릭하면 하위 카테고리인 ‘컵’, ‘텀블러’의 상품이 모 두 출력되고, ‘리빙’의 하위 카테고리인 ‘컵’ 클릭시 ‘컵’의 상품만 보여진다.
-
+- 카테고리는 1차와 2차로 나뉨
+- ‘리빙’ 카테고리를 클릭하면 하위 카테고리인 ‘컵’, ‘텀블러’의 상품이 모두 출력되고, ‘리빙’의 하위 카테고리인 ‘컵’ 클릭시 ‘컵’의 상품만 보여짐
+<br/>
+<br/>
 ![category](Rainbow/src/main/webapp/resources/images/category.gif)
 
 <hr/>
-
-
+<br/>
+<br/>
+<br/>
 
 # *키워드 검색*
-- 키워드를 검색하면 해당 키워드가 들어간 상품이 출력된다. 
-- 카테고리별 상품 목록과 같이 이미지나 상품 이름을 클릭하면 해당 상품의 상세 페이지로 넘어간다.
+- 키워드를 검색하면 해당 키워드가 들어간 상품만 출력
+- 카테고리별 상품 목록과 같이 이미지나 상품 이름을 클릭하면 해당 상품의 상세 페이지로 넘어감
+<br/>
+<br/>
 ![search](Rainbow/src/main/webapp/resources/images/search.gif)
 
 <hr/>
-
-
+<br/>
+<br/>
+<br/>
 
 # *장바구니*
-: 상품 상세 페이지에서 Ajax를 통해 장바구니에 담긴다. 해당 상품이 이미 담겨있을 땐 중복 방지를 위해 수량만 업데이트 된다.
+- 상품 상세 페이지에서 Ajax를 통해 장바구니에 담김
+- 해당 상품이 이미 담겨있을 땐 중복 방지를 위해 수량만 업데이트
+- 선택한 상품을 삭제, 구매
+<br/>
+<br/>
 ![addcart](Rainbow/src/main/webapp/resources/images/addcart.gif)
 
 <hr/>
-
-
+<br/>
+<br/>
+<br/>
 
 # *주문하기*
-- 장바구니에서 선택한 상품만 출력된다.
-- 주소 API를 이용해 우편번호와 주소를 입력하여 주문이 진행된다.
-- 주문 완료한 상품은 장바구니에서 사라진다.
+- 장바구니에서 선택한 상품만 출력
+- 주소 API를 이용해 우편번호와 주소를 입력하여 주문 진행
+- 주문 완료한 상품은 장바구니에서 사라짐
+<br/>
+<br/>
 ![order](Rainbow/src/main/webapp/resources/images/order.gif)
 
-
+<hr/>
+<br/>
+<br/>
+<br/>
 
 # *주문 목록*
-- 회원이 지금까지 주문한 주문 목록이 주문번호로 나뉘어서 출력된다. 
-- 주문번호를 통해 해당 주문의 상세 정보 페이지로 이동이 가능하다.
+- 회원이 지금까지 주문한 주문 목록이 주문번호로 나뉘어서 출력
+- 주문번호를 통해 해당 주문의 상세 정보 페이지로 이동
+<br/>
+<br/>
 ![orderlist](Rainbow/src/main/webapp/resources/images/orderlist.gif)
 
 <hr/>
+<br/>
+<br/>
+<br/>
 
-
-
-# *리뷰 등록*
-- 해당 아이디로 주문한 상품만 후기글을 작성할 수 있으며 자신의 글에만 ‘수정’, ‘삭제’ 버튼이 보인다. 
+# *리뷰*
+- 후기글의 제목을 클릭하면 해당 글의 내용과 댓글 리스트가 보여짐
+- 해당 아이디로 주문한 상품만 후기글을 작성할 수 있으며 자신의 글에만 ‘수정’, ‘삭제’ 버튼이 보임
+- 상품을 구매하지 않으면 리뷰를 등록 불가
+<br/>
+<br/>
 ![orderreview](Rainbow/src/main/webapp/resources/images/orderreview.gif)
-
-- 상품을 구매하지 않으면 리뷰를 등록할 수 없다.
+<br/>
+<br/>
+<<strong> 구매하지 않았을 시 <strong>>
 ![norderrv](Rainbow/src/main/webapp/resources/images/norderrv.gif)
 
 <hr/>
-
-
+<br/>
+<br/>
+<br/>
 
 # *댓글*
-- 개인정보보호로 회원의 닉네임과 댓글 내용, 날짜만 출력된다.
+- 개인정보보호로 회원의 닉네임과 댓글 내용, 날짜만 출력
+- 댓글 기능 또한 비회원은 이용 불가
+- ‘댓글은 로그인 후 이용 가능 합니다.’의 ‘로그인’에 로그인 페이지 링크를 걸어둬서 바로 이동 가능
+<br/>
+<br/>
 ![reply](Rainbow/src/main/webapp/resources/images/reply.gif)
-
-- 댓글 기능 또한 비로그인은 이용할 수 없다.
-- ‘댓글은 로그인 후 이용 가능 합니다.’의 ‘로그인’에 로그인 페이지 링크를 걸어둬서 바로 이동 가능하다.
+<br/>
+<br/>
+<<strong> 로그인 안 했을 때 <strong>>
 ![nreply](Rainbow/src/main/webapp/resources/images/nreply.gif)
 
