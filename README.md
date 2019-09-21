@@ -47,7 +47,8 @@ Source
 
 # *로그인*
 : 입력한 이메일을 이용해 패스워드를 가져온 후 로그인 폼에 입력한 패스워드와 DB에 저장된 패스워드를 비교하여 로그인한다.
-<br>
+<br/>
+<br/>
 ![login](Rainbow/src/main/webapp/resources/images/login.gif)
 
 <hr/>
