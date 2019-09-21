@@ -37,4 +37,4 @@ Source
 - View (JSP File) 30개
 
 
-![join](.Rainbow/src/main/webapp/resources/images/addcart.gif)
+![join](Rainbow/src/main/webapp/resources/images/join.gif)
