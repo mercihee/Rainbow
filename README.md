@@ -76,11 +76,17 @@ Source
 
 # *비밀번호 찾기 / 변경*
 : 입력한 이메일이 회원 테이블에 있을시에만 JavaMail을 통해 비밀번호를 변경하는 폼을 메일로 발송
+<br/>
+<br/>
 ![findpass](Rainbow/src/main/webapp/resources/images/findpass.gif)
+
 <br/>
 <br/>
-<<strong> 메일로 넘어온 폼을 통해 비밀번호 변경 <strong>>
+
+<<strong> 메일로 넘어온 폼을 통해 비밀번호 변경 </strong>>
   - 회원가입할 때와 마찬가지로 유효성 검사 후 변경
+<br/>
+<br/>
 ![uppass](Rainbow/src/main/webapp/resources/images/uppass.gif)
 
 <hr/>
@@ -93,7 +99,6 @@ Source
 - ‘리빙’ 카테고리를 클릭하면 하위 카테고리인 ‘컵’, ‘텀블러’의 상품이 모두 출력되고, ‘리빙’의 하위 카테고리인 ‘컵’ 클릭시 ‘컵’의 상품만 보여짐
 <br/>
 <br/>
-
 ![category](Rainbow/src/main/webapp/resources/images/category.gif)
 
 <hr/>
@@ -106,7 +111,6 @@ Source
 - 카테고리별 상품 목록과 같이 이미지나 상품 이름을 클릭하면 해당 상품의 상세 페이지로 넘어감
 <br/>
 <br/>
-
 ![search](Rainbow/src/main/webapp/resources/images/search.gif)
 
 <hr/>
@@ -120,7 +124,6 @@ Source
 - 선택한 상품을 삭제, 구매
 <br/>
 <br/>
-
 ![addcart](Rainbow/src/main/webapp/resources/images/addcart.gif)
 
 <hr/>
@@ -134,7 +137,6 @@ Source
 - 주문 완료한 상품은 장바구니에서 사라짐
 <br/>
 <br/>
-
 ![order](Rainbow/src/main/webapp/resources/images/order.gif)
 
 <hr/>
@@ -147,7 +149,6 @@ Source
 - 주문번호를 통해 해당 주문의 상세 정보 페이지로 이동
 <br/>
 <br/>
-
 ![orderlist](Rainbow/src/main/webapp/resources/images/orderlist.gif)
 
 <hr/>
@@ -161,12 +162,11 @@ Source
 - 상품을 구매하지 않으면 리뷰를 등록 불가
 <br/>
 <br/>
-
 ![orderreview](Rainbow/src/main/webapp/resources/images/orderreview.gif)
 
 <br/>
 <br/>
-<<strong> 구매하지 않았을 시 <strong>>
+<<strong> 구매하지 않았을 시 </strong>>
 ![norderrv](Rainbow/src/main/webapp/resources/images/norderrv.gif)
 
 <hr/>
@@ -181,8 +181,12 @@ Source
 <br/>
 <br/>
 ![reply](Rainbow/src/main/webapp/resources/images/reply.gif)
+
 <br/>
 <br/>
-<<strong> 로그인 안 했을 때 <strong>>
+
+<<strong> 로그인 안 했을 때 </strong>>
+<br/>
+<br/>
 ![nreply](Rainbow/src/main/webapp/resources/images/nreply.gif)
 
